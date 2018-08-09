@@ -10,4 +10,6 @@ import os
 import re
 import utils
 
-pprint.pprint(utils.getGoDeps())
+for d in utils.getGoDeps():
+    print('go get {}'.format(d))
+    utils.execute('go get {}'.format(d))
